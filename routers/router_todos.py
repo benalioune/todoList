@@ -1,5 +1,5 @@
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException
 from classes.schemas_dto import Todos
 from classes.schemas_dto import Todo
 from classes.schemas_dto  import TodoNoID
