@@ -25,13 +25,13 @@ configs= {
 # import des crédentiels
 #initialise our app import credentials if not done
 if not firebase_admin._apps: 
-    cred = credentials.Certificate("configs/todo-a0df3-firebase-adminsdk-ulejs-c36a75d8de.json")
+    cred = credentials.Certificate(configs["FIREBASE_SERVICE_ACCOUNT_KEY"])
     firebase_admin.initialize_app(cred)
 
 
 
 # getting access to firebase  by using rebase / create a new firebase instance  
-firebase = pyrebase.initialize_app(firebaseConfig)
+firebase = pyrebase.initialize_app(configs["FIREBASE_CONFIG"])
 # access to our database instance by pyrebase 
 db = firebase.database()
 authTodo = firebase.auth()
