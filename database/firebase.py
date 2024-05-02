@@ -17,6 +17,7 @@ configs= {
 }
 
 
+firebase_config_json  =  json.loads(configs['FIREBASE_CONFIG'])
 
 
 # Parse the JSON key
@@ -33,7 +34,7 @@ if not firebase_admin._apps:
 
 
 # getting access to firebase  by using rebase / create a new firebase instance  
-firebase = pyrebase.initialize_app(configs["FIREBASE_CONFIG"])
+firebase = pyrebase.initialize_app(firebase_config_json)
 # access to our database instance by pyrebase 
 db = firebase.database()
 authTodo = firebase.auth()
