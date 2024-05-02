@@ -19,3 +19,10 @@ print("Hello World")
 ## Exécuter des tests avec la commande pytest
 
 - Ouvrir une console dans VSCode (F12) puis exécuter
+bash: pytest test_add.py
+ou simplement
+pytest test_add.py
+
+## Les assertions
+Les assertions sont utilisées pour définir les résultats attendus. Si l'assertion est vraie, alors tout est bien. Sinon, il y a une erre
+Les assertions sont utilisées pour vérifier si un élément est vrai ou non
