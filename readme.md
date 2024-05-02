@@ -38,3 +38,7 @@ assert False, "This is false because ..."
 Le message d'erreur par défaut est "AssertionError". On peut changer cela mais il est préférable de ne pas le faire. Il est mieux de
 Le message d'erreur par défaut est "AssertionError". On peut changer cela mais il est préférable de ne pas le faire car c'est décon
 Le message d'erreur par défaut est "AssertionError". On peut changer cela en passant un second argument à l'assertion.
+Le message d'erreur par défaut est "AssertionError: False is not true" mais on peut modifier cela
+python
+assert False, "This is false because ...", extra="Extra information here"
+Le message d'erreur sera donc "AssertionError: This is false because ...\nExtra information here"
