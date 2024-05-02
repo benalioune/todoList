@@ -1,8 +1,15 @@
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.security.oauth2 import OAuth2PasswordRequestForm
+import os
+import sys
+
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.getcwd()))
 
 from database.firebase import db
+
 
 from fastapi.security import OAuth2PasswordBearer
 
