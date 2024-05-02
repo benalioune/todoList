@@ -16,3 +16,6 @@ python
 python3
 python3.9
 print("Hello World")
+## Exécuter des tests avec la commande pytest
+
+- Ouvrir une console dans VSCode (F12) puis exécuter
