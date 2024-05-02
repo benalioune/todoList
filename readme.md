@@ -42,3 +42,9 @@ Le message d'erreur par défaut est "AssertionError: False is not true" mais on 
 python
 assert False, "This is false because ...", extra="Extra information here"
 Le message d'erreur sera donc "AssertionError: This is false because ...\nExtra information here"
+## Les classes de base d'assertion
+Il y a plusieurs classes de base d'assertion qui peuvent être utilisée pour définir votre propre assertion. Par exemple, `py
+Il y a plusieurs classes de base d'assertion qui peuvent être utilisée pour définir votre propre assertion. Par exemple, `py
+Il y a plusieurs classes de base d'assertion qui peuvent être utilisée pour définir votre propre assertion. Par exemple, `pytest.raises
+Il existe plusieurs classes de base d'assertion qui peuvent être utiles
+- `AssertionError` : La classe de base d'assertion standard. Elle est levée lorsque l'assertion est fausse.
