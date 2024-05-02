@@ -1,8 +1,6 @@
 
 from fastapi.testclient import TestClient
 from main import app  # Assurez-vous d'ajuster le chemin si nécessaire
-from database.firebase import db
-from classes.schemas_dto import User
 from unittest.mock import patch
 
 # Mock de la fonction auth.create_user pour éviter d'appeler Firebase lors des tests

@@ -1,10 +1,8 @@
 import firebase_admin
 from firebase_admin import credentials
 import pyrebase
-import json
 import os
 
-from configs.firebase_config import firebaseConfig
 
 from dotenv import load_dotenv
 
