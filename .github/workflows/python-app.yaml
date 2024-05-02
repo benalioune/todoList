@@ -19,6 +19,9 @@ jobs:
       matrix:
         python-version: [3.8]
 
+    codecov: 
+      token: 22a3a04f-46f6-44e1-955d-2b02b5ff1816
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version}}
