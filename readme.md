@@ -31,3 +31,10 @@ assert True, "This is true"
 assert False, "This is false"
 La dernière assertion ne s'exécutera pas car elle est fausse. Pour que cela fonctionne, il faut utiliser l'argument "-x" qui arrête à
 La ligne ci-dessus va lever une exception AssertionError car l'expression est fausse
+## Les messages d'erreur personnalisés
+On peut donner un message à afficher en cas d'échec de l'assertion
+python
+assert False, "This is false because ..."
+Le message d'erreur par défaut est "AssertionError". On peut changer cela mais il est préférable de ne pas le faire. Il est mieux de
+Le message d'erreur par défaut est "AssertionError". On peut changer cela mais il est préférable de ne pas le faire car c'est décon
+Le message d'erreur par défaut est "AssertionError". On peut changer cela en passant un second argument à l'assertion.
