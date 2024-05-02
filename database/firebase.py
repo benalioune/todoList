@@ -1,6 +1,8 @@
 import firebase_admin
 from firebase_admin import credentials
+import json
 import pyrebase
+
 import os
 
 
@@ -17,13 +19,15 @@ configs= {
 
 
 
+# Parse the JSON key
+service_account_key_json = json.loads(configs["FIREBASE_SERVICE_ACCOUNT_KEY"])
 
 
 
 # import des crédentiels
 #initialise our app import credentials if not done
 if not firebase_admin._apps: 
-    cred = credentials.Certificate(configs["FIREBASE_SERVICE_ACCOUNT_KEY"])
+    cred = credentials.Certificate(service_account_key_json)
     firebase_admin.initialize_app(cred)
 
 
