@@ -31,9 +31,6 @@ async def get_todo(user_data: int= Depends(get_current_user)):
 
 
 
-# 1. Exercice (10min) Create new Todo: POST
-# response_model permet de définir de type de réponse (ici nous retournons le todo avec sont id)
-# status_code est définit sur 201-Created car c'est un POST
 @router.post('/todos', response_model=Todo, status_code=201)
 async def create_todo(givenName:str):
     # génération de l'identifiant unique
@@ -48,8 +45,7 @@ async def create_todo(givenName:str):
     return newTodo
 
 
-# 2. Exercice (10min) Todo GET by ID
-# response_model est un Todo car nous souhaitons trouvé l'étudiant correspodant à l'ID
+
 @router.get('/todos/{todo_id}', response_model=Todo)
 async def get_todo_by_id(todo_id: str, user_data: int= Depends(get_current_user)):
     queryResult = db.child('todo').child(todo_id).get(user_data['idToken']).val()
@@ -59,7 +55,6 @@ async def get_todo_by_id(todo_id: str, user_data: int= Depends(get_current_user)
 
 
 
-# 3. Exercice (10min) PATCH Todo (name)
 @router.patch('/{todo_id}', status_code=204)
 async def todo_update(todo_id: str, todo: TodoNoID, user_data: int= Depends(get_current_user)):
     queryResult = db.child('todo').child(todo_id).get(user_data['idToken']).val()
@@ -67,8 +62,6 @@ async def todo_update(todo_id: str, todo: TodoNoID, user_data: int= Depends(get_
     updatedTodo = Todo(id=todo_id, **todo.model_dump())
     return db.child('todo').child(todo_id).update(data=updatedTodo.model_dump(), token=user_data['idToken'])
 
-
-# 4. Exercice (10min) DELETE Todo
 @router.delete("/{t_id}", status_code=202, response_model=str)
 async def todo_delete(todo_id: str, user_data: int= Depends(get_current_user)) :
     queryResult = db.child('todo').child(todo_id).get(user_data['idToken']).val()
@@ -77,8 +70,3 @@ async def todo_delete(todo_id: str, user_data: int= Depends(get_current_user)) :
     db.child('todo').child(todo_id).remove(token=user_data['idToken'])
     return "Todo deleted"
 
-# Reste à faire 
-# - Sortir mon todo's router dans un dossier "routers"
-# - Rédiger une documentation et l'ajouter à mon app FastAPI()
-# - Sortir mes pydantic models dans un dossier classes
-# - Ajouter les tags 

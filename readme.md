@@ -48,3 +48,4 @@ Il y a plusieurs classes de base d'assertion qui peuvent être utilisée pour d�
 Il y a plusieurs classes de base d'assertion qui peuvent être utilisée pour définir votre propre assertion. Par exemple, `pytest.raises
 Il existe plusieurs classes de base d'assertion qui peuvent être utiles
 - `AssertionError` : La classe de base d'assertion standard. Elle est levée lorsque l'assertion est fausse.
+sdjns
