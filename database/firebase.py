@@ -39,3 +39,4 @@ firebase = pyrebase.initialize_app(firebase_config_json)
 db = firebase.database()
 authTodo = firebase.auth()
 
+
