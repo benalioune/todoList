@@ -22,8 +22,7 @@ firebase_config_json  =  json.loads(configs['FIREBASE_CONFIG'])
 
 # Parse the JSON key
 service_account_key_json = json.loads(configs["FIREBASE_SERVICE_ACCOUNT_KEY"])
-
-
+# Initialize the app with a service account
 
 # import des crédentiels
 #initialise our app import credentials if not done
